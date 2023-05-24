@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.EducationFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens30dp"
+            android:layout_marginTop="@dimen/dimens20dp"
+            android:layout_marginBottom="@dimen/dimens20dp"
+            android:textColor="@color/yello"
+            android:layout_marginStart="@dimen/dimens20dp"
+            android:text="@string/education"
+            android:textSize="@dimen/dimens15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvEducation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens30dp"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/dimens15sp"
+            android:layout_marginStart="@dimen/dimens20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

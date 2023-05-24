@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginViewModal"
+            type="com.example.schooldetailapidemo.ui.model.viewmodel.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loginBg"
+            tools:context=".ui.activity.LoginActivity">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="@dimen/dimens80dp"
+                    android:layout_height="@dimen/dimens50dp"
+                    android:layout_marginTop="@dimen/dims_30dp"
+                    android:src="@drawable/back_arrow"
+                    app:layout_constraintEnd_toStartOf="@+id/tvHeading"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens30dp"
+                    android:layout_marginEnd="@dimen/dims_100dp"
+                    android:text="@string/welcome_to_kodris_africa"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimens30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/backArrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/backArrow"
+                    app:layout_constraintTop_toTopOf="@id/backArrow" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens20dp"
+                    android:text="@string/lorem_ipsm_is_simply_dummy_text_of_the_printing_and_typesetting_industry"
+                    android:textColor="@color/tvDescriptionColor"
+                    android:textSize="@dimen/dimens10sp"
+                    android:layout_marginBottom="@dimen/dimens50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvHeading"
+                    app:layout_constraintStart_toStartOf="@id/tvHeading"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

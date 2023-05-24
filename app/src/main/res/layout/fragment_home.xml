@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        tools:context=".ui.fragment.HomeFragment">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.activity.MainActivity">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/DarkGray"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:contentScrim="@color/blue"
+                    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimens15dp"
+                        android:layout_marginHorizontal="@dimen/dimens10dp"
+                        android:background="@drawable/constrain_design"
+                        android:padding="@dimen/dimens5dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimens10dp"
+                            android:layout_marginTop="@dimen/dimens10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ExtraText">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimens170dp"
+                                android:background="@drawable/gradient_background"
+                                android:scaleType="fitXY"
+                                app:layout_collapseMode="parallax"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/materialTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimens20dp"
+                                android:layout_marginTop="@dimen/dimens32dp"
+                                android:text="@string/hey_lilly"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/dimens30sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imageBell"
+                                android:layout_width="@dimen/dimens30dp"
+                                android:layout_height="@dimen/dimens30dp"
+                                android:layout_marginEnd="@dimen/dims_30dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_notification"
+                                app:layout_collapseMode="parallax"
+                                app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/materialTextView" />
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/textInputEditText"
+                                android:layout_width="@dimen/dimen0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dimens10dp"
+                                android:layout_marginTop="@dimen/dimens20dp"
+                                android:background="@drawable/edit_circle"
+                                android:minHeight="@dimen/dims_48dp"
+                                android:lines="1"
+                                android:paddingStart="@dimen/dimens10dp"
+                                android:maxLines="1"
+                                android:textColor="@color/darkGray"
+                                app:layout_constraintEnd_toStartOf="@+id/imageSearch"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imageSearch"
+                                android:layout_width="@dimen/dimens50dp"
+                                android:layout_height="@dimen/dimens50dp"
+                                android:layout_marginEnd="@dimen/dims_30dp"
+                                android:background="@drawable/image_radius"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_search"
+                                app:layout_collapseMode="parallax"
+                                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textInputEditText" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textViewtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimens40dp"
+                                android:background="@color/blue"
+                                android:text="@string/purchease_a_kodris_token"
+                                android:textAlignment="center"
+                                android:textColor="@color/yello"
+                                android:textSize="@dimen/dimens20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageSearch" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvFooter"
+                                android:layout_width="@dimen/dims_220dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimens20dp"
+                                android:layout_marginBottom="@dimen/dimens20dp"
+                                android:background="@color/lightYellow"
+                                android:text="@string/purchase_a_primium_yearly_student_licence"
+                                android:textAlignment="center"
+                                android:textColor="@color/darkGray"
+                                android:textSize="@dimen/dimens15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textViewtitle"
+                                tools:ignore="TextSizeCheck" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="@dimen/dimens50dp"
+                                android:layout_height="@dimen/dimens50dp"
+                                android:background="@color/lightYellow"
+                                android:src="@drawable/keyss"
+                                app:layout_constraintBottom_toBottomOf="@id/tvFooter"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.512"
+                                app:layout_constraintStart_toEndOf="@id/tvFooter"
+                                app:layout_constraintTop_toTopOf="@id/tvFooter"
+                                app:layout_constraintVertical_bias="0.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:context=".ui.activity.MainActivity">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab"
+                        android:layout_width="@dimen/dimen0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dims_30dp"
+                        android:layout_marginTop="@dimen/dimens20dp"
+                        android:background="@drawable/tab_stroke"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabIndicatorHeight="@dimen/dimen0dp"
+                        app:tabTextColor="@color/blue"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="@dimen/dimen0dp"
+                        android:layout_height="@dimen/dimen0dp"
+                        android:layout_marginTop="@dimen/dimens20dp"
+                        android:contentDescription="@string/hello"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tab">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

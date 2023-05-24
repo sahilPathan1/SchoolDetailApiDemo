@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="registerViewModel"
+            type="com.example.schooldetailapidemo.ui.model.viewmodel.RegisterViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/loginBg"
+            tools:context=".ui.activity.RegisterActivity">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/CommonHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_common_header" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/subContainer"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dims_10dp"
+                android:background="@drawable/constrain_design"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/tvFooter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headingContainer">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayouutEmail"
+                    style="@style/CustomTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens20dp"
+                    android:layout_marginTop="@dimen/dims_60dp"
+                    android:textColorHint="@color/darkYellow"
+                    app:boxBackgroundColor="#FFFFFF"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/Darkkyellow"
+                    app:hintTextColor="@color/Darkkyellow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/email_logo"
+                        android:hint="@string/kodris_gmail_com"
+                        android:singleLine="true"
+                        android:text="@={registerViewModel.email}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayouutPass"
+                    style="@style/CustomTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens20dp"
+                    android:layout_marginTop="@dimen/dims_10dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/Darkkyellow"
+                    app:hintTextColor="@color/Darkkyellow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayouutEmail"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPassWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/password"
+                        android:hint="@string/password"
+                        android:singleLine="true"
+                        android:text="@={registerViewModel.password}"
+                        android:textColorHint="@color/darkYellow" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutCPass"
+                    style="@style/CustomTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimens20dp"
+                    android:layout_marginTop="@dimen/dims_10dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/Darkkyellow"
+                    app:hintTextColor="@color/Darkkyellow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayouutPass"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtConfirmPassWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/password"
+                        android:hint="@string/confirmPass"
+                        android:singleLine="true"
+                        android:text="@={registerViewModel.confirmPassword}"
+                        android:textColorHint="@color/darkYellow" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_hereby_accept_all_the"
+                    android:textSize="@dimen/dimens12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/checkBoxLable"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayoutCPass"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCPass" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/checkBoxLable"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimens12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignUp"
+                    style="@style/btnStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimens70dp"
+                    android:layout_marginTop="@dimen/dimens20dp"
+                    android:background="@drawable/btn_design_radius_yellow"
+                    android:text="@string/signup"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dims_17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ImageLogo"
+                android:layout_width="@dimen/dimens100dp"
+                android:layout_height="@dimen/dimens100dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cube"
+                app:layout_constraintBottom_toTopOf="@+id/subContainer"
+                app:layout_constraintEnd_toEndOf="@+id/subContainer"
+                app:layout_constraintStart_toStartOf="@+id/subContainer"
+                app:layout_constraintTop_toTopOf="@+id/subContainer"
+                app:shapeAppearance="@style/roundedImageViewRounded" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFooter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:text="@string/footer"
+                android:textColor="@color/tvDescriptionColor"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvLogin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subContainer" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens5dp"
+                android:text="@string/LoggedIn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvFooter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvFooter"
+                app:layout_constraintTop_toTopOf="@id/tvFooter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens120dp"
+        android:backgroundTint="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimens10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/chatImage"
+                android:layout_width="@dimen/dimens70dp"
+                android:layout_height="@dimen/dimens70dp"
+                android:layout_marginStart="@dimen/dimens15dp"
+                android:background="@drawable/profile"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/roundedImageViewRounded" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvChatName"
+                android:layout_width="@dimen/dims_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/schooltitle"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dims_20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvTime"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/chatImage"
+                app:layout_constraintTop_toTopOf="@id/chatImage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/dims_15sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="@dimen/dimens5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvChatName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvChatName"
+                app:layout_constraintTop_toTopOf="@+id/tvChatName" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMessage"
+                android:layout_width="@dimen/dims_0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/dims_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/chatImage"
+                app:layout_constraintEnd_toEndOf="@+id/tvTime"
+                app:layout_constraintStart_toStartOf="@+id/tvChatName"
+                app:layout_constraintTop_toBottomOf="@id/tvChatName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

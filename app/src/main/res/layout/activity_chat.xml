@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.ChatActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/idToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightYellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="@dimen/dimens40dp"
+                android:layout_height="@dimen/dimens40dp"
+                android:layout_marginStart="@dimen/dimens50dp"
+                android:src="@drawable/ic_launcher_background"
+                app:shapeAppearance="@style/roundedImageViewRounded" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profileName"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimens60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idToolbar"
+            app:layout_constraintBottom_toTopOf="@id/Bottom"
+            android:layout_marginBottom="@dimen/dimens70dp"
+            tools:itemCount="20" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimens20dp"
+            android:layout_margin="@dimen/dimens10dp"
+            android:padding="@dimen/dimens5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/edt_corner_design"
+            style="@style/MyEditTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSand"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="50dp"
+                    app:boxBackgroundMode="none"
+                    android:background="@drawable/edit_text_corner"
+                    style="@style/MyEditTextStyle"
+                    android:layout_marginStart="@dimen/dimens20dp"
+                    android:hint="@string/type_a_message"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/sandData"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sandData"
+                android:layout_width="@dimen/dims_50dp"
+                android:layout_height="@dimen/dims_40dp"
+                android:background="@drawable/sand"
+                android:layout_marginEnd="@dimen/dimens5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edtSand"
+                app:layout_constraintBottom_toBottomOf="@id/edtSand"
+                app:layout_constraintStart_toEndOf="@id/edtSand" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/frameData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.School">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/dimens40dp"
+            android:id="@+id/rvShowData"
+            tools:listitem="@layout/school_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="20" />
+
+    </FrameLayout>
+</layout>

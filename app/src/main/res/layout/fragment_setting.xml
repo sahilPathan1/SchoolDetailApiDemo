@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topMainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".ui.fragment.SettingFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens20dp"
+            android:layout_marginTop="@dimen/dimens20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitile"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/setting"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimens30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/notifyImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/notifyImage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_noti_orange"
+                app:layout_constraintBottom_toBottomOf="@id/tvTitile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTitile"
+                app:layout_constraintTop_toTopOf="@id/tvTitile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/TvsubContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens20dp"
+            android:padding="@dimen/dimens20dp"
+            android:layout_marginTop="@dimen/dimens20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerContainer">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/circleImage"
+                android:layout_width="@dimen/dimens90dp"
+                android:layout_height="@dimen/dimens90dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/roundedImageViewRounded" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:text="@string/lilly_Paul"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimens20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvSubEmail"
+                app:layout_constraintStart_toEndOf="@id/circleImage"
+                app:layout_constraintTop_toTopOf="@id/circleImage"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubEmail"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:text="@string/kodris"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editImage"
+                app:layout_constraintStart_toEndOf="@+id/circleImage"
+                app:layout_constraintTop_toBottomOf="@id/tvSubTitle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/editImage"
+                android:layout_width="@dimen/dims_20dp"
+                android:layout_height="@dimen/dimens20dp"
+                android:src="@drawable/edit"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSubTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dims_320dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvsubContainer">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10dp"
+            android:padding="@dimen/dimens30dp"
+            android:layout_marginTop="@dimen/dimens20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TvsubContainer">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changePassImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/lock"
+                android:layout_marginTop="@dimen/dimens5dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvChangePass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvChangePass"
+                android:layout_marginBottom="@dimen/dimens10dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvChangePass"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="Change Pasword"
+                android:layout_marginTop="@dimen/dimens10dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangePass"
+                app:layout_constraintStart_toEndOf="@id/changePassImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvChangePass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvChangePass"
+                app:layout_constraintTop_toTopOf="@id/tvChangePass" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changePurchaseImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/keyss"
+                app:layout_constraintBottom_toBottomOf="@id/tvPurchase"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvPurchase"
+                android:layout_marginBottom="@dimen/dimens10dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPurchase"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/purchase"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvChangePass"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangePurchase"
+                app:layout_constraintStart_toEndOf="@id/changePurchaseImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangePurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvPurchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvPurchase" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeSubscriptionImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/subscribe"
+                app:shapeAppearance="@style/CornerCut"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubscription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSubscription"
+                android:layout_marginBottom="@dimen/dimens10dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubscription"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/subscriptionPlan"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvPurchase"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangeSubscription"
+                app:layout_constraintStart_toEndOf="@id/changeSubscriptionImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangeSubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvSubscription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSubscription" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeFaqImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/faq"
+                app:layout_constraintBottom_toBottomOf="@id/tvFaq"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvFaq" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFaq"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/faq"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvSubscription"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangeFaq"
+                app:layout_constraintStart_toEndOf="@id/changeFaqImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangeFaq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvFaq"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvFaq" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeTearmAndConditionImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/term"
+                app:layout_constraintBottom_toBottomOf="@id/tvTearmAndCondition"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTearmAndCondition" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTearmAndCondition"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/term_and_condition"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvFaq"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangeTearmAndCondition"
+                app:layout_constraintStart_toEndOf="@id/changeTearmAndConditionImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangeTearmAndCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvTearmAndCondition"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTearmAndCondition" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeLogOutImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/logout"
+                app:layout_constraintBottom_toBottomOf="@id/tvLogOut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvLogOut" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvLogOut"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/logOut"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvTearmAndCondition"
+                app:layout_constraintEnd_toStartOf="@id/rightArrowChangeLogOut"
+                app:layout_constraintStart_toEndOf="@id/changeLogOutImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rightArrowChangeLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arroe_logout"
+                app:layout_constraintBottom_toBottomOf="@id/tvLogOut"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvLogOut" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeLanguageImage"
+                android:layout_width="@dimen/dimens35dp"
+                android:layout_height="@dimen/dimens35dp"
+                android:backgroundTint="@color/lightYellow"
+                android:background="@drawable/edt_corner_design"
+                android:src="@drawable/language"
+                app:layout_constraintBottom_toBottomOf="@id/tvChangeLanguageImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvChangeLanguageImage" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvChangeLanguageImage"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens40dp"
+                android:text="@string/select_language"
+                android:layout_marginTop="@dimen/dimens30dp"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/changeLogOutImage"
+                app:layout_constraintEnd_toStartOf="@id/changeLanguageArrow"
+                app:layout_constraintStart_toEndOf="@id/changeLanguageImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/changeLanguageArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/tvChangeLanguageImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvChangeLanguageImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

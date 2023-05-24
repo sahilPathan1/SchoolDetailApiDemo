@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.Teachings">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/teacher1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:layout_marginBottom="@dimen/dimens20dp"
+                android:textColor="@color/yello"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:text="@string/email"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/teacher"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/dimens15sp"
+                android:layout_marginStart="@dimen/dimens20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teacher1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subject1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:layout_marginTop="@dimen/dimens10dp"
+                android:text="@string/contact_number"
+                android:textColor="@color/yello"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teacher" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:textColor="@color/darkGray"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subject1"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standard1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:text="@string/address"
+                android:textColor="@color/yello"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subject" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/standard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/dimens15sp"
+                android:layout_marginStart="@dimen/dimens20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/standard1"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cource1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:text="@string/website"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textColor="@color/yello"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/standard" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cource"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens30dp"
+                android:textColor="@color/darkGray"
+                android:layout_marginStart="@dimen/dimens20dp"
+                android:textSize="@dimen/dimens15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cource1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+</layout>

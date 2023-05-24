@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimens15dp">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/mainContainer"
+            app:layout_constraintStart_toStartOf="@+id/mainContainer"
+            app:layout_constraintTop_toTopOf="@+id/mainContainer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens15dp"
+            android:layout_marginHorizontal="@dimen/dimens10dp"
+            android:layout_marginTop="@dimen/dimen60dp"
+            android:background="@drawable/constrain_design"
+            android:padding="@dimen/dimens20dp"
+            app:layout_constraintBottom_toBottomOf="@id/idTab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/mainContainer"
+           app:layout_constraintTop_toBottomOf="@id/toolbar"
+            >
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSchoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens40dp"
+                android:text="@string/schoolname"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/dimens20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEstablishDatetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:text="@string/establish_date"
+                android:textAlignment="center"
+                android:textColor="@color/navy"
+                android:textSize="@dimen/dimens20sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSchoolName"
+                app:layout_constraintEnd_toStartOf="@+id/tvEstablishDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSchoolName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEstablishDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens20dp"
+                android:textAlignment="center"
+                android:textColor="@color/Darkkyellow"
+                android:textSize="@dimen/dimens20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvEstablishDatetitle"
+                app:layout_constraintTop_toBottomOf="@id/tvSchoolName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapableImageView"
+            android:layout_width="@dimen/dimens100dp"
+            android:layout_height="@dimen/dimens100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="@id/subContainer"
+            app:layout_constraintEnd_toEndOf="@+id/subContainer"
+            app:layout_constraintStart_toStartOf="@+id/subContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402"
+            app:shapeAppearance="@style/roundedImageViewRounded" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/idTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens20dp"
+            android:background="@drawable/detail_tab_design"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subContainer"
+            app:tabIndicatorHeight="@dimen/dimen0dp"
+            app:tabTextAppearance="@style/CustomTextStyle"
+            app:tabTextColor="@color/blue"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/idViewPager"
+            android:layout_width="@dimen/dimen0dp"
+            android:layout_height="@dimen/dimen0dp"
+            android:layout_marginTop="@dimen/dimens10dp"
+            android:contentDescription="@string/hello"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idTab" />
+
+        <FrameLayout
+            android:id="@+id/flFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens80dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens20dp"
+                android:layout_marginTop="@dimen/dimens10dp"
+                android:background="@drawable/bottom_sheet_style"
+                app:itemIconTint="@color/white"
+                app:itemTextColor="@color/yello"
+                app:menu="@menu/chat_menu" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
